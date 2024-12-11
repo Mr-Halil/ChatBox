@@ -1,0 +1,66 @@
+.main-page-background {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #282c34;
+    overflow: hidden; /* Scroll bar oluşmasını engeller */
+    transition: background-color 0.3s ease-in-out;
+}
+
+.main-page-background.dimmed {
+    background-color: rgba(85, 0, 255, 0.6); /* Sayfa arka planını karartıyoruz */
+}
+
+.course-box {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 180px;
+    opacity: 0.8;
+    animation: appear-disappear 5s forwards;
+    border-radius: 10px; /* Köşe yuvarlama */
+    background-color: rgba(0, 0, 0, 0.6); /* Karartılmış arka plan */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Hafif gölge efekti */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.course-box.dimmed {
+    opacity: 0.3; /* Karartma etkisi */
+    background-color: rgba(0, 0, 0, 0.9); /* Daha yoğun bir karartma */
+}
+
+.course-box:hover {
+    transform: scale(1.1); /* Hover efekti: kutunun büyümesi */
+}
+
+.course-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.course-name {
+    color: white;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+@keyframes appear-disappear {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    30% {
+        opacity: 0.3;
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
