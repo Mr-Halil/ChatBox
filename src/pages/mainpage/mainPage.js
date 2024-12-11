@@ -3,6 +3,7 @@ import CourseBox from "../../components/CourseBox/CourseBox";
 import "./mainPage.css";
 import SearchBar from "../../components/searchBar/SearchBar";
 
+
 function MainPage() {
   const [boxes, setBoxes] = useState([]);
   const [isSearchFocused, setIsSearchFocused] = useState(false); // Arama çubuğuna odaklanma durumu

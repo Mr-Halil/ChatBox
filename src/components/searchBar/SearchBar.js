@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import './SearchBar.css';
 
+
+import anime from 'animejs/lib/anime.es.js';
+
 function SearchBar({ onFocus, onBlur }) {
   const [query, setQuery] = useState("");
   
